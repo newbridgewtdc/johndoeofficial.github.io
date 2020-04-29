@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>EBusiness</title>
+		<!-- Adding an icon to the title -->
+		<link rel="icon" href="images/favicon.png">
+		<!--Making the website responsive-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Linking to styleheet-->
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<!-- Retrieving font for styling -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<style>
+		
+		.text {
+			font-size: 20px;
+		}
+		
+		td {
+			padding: 3px;
+			font-size: 20px;
+		}
+
+		/* section (styles the whole section) */
+		section {
+			min-height: inherit;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			position: relative;
+		}
+
+		/* label (styles just the labels) */
+		label {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			flex-wrap: nowrap;
+			margin: 12px 0;
+			cursor: pointer;
+			position: relative;
+		}
+
+		/* .design    (used to style the radiobuttons and labels) */
+		.design {
+			width: 16px;
+			height: 16px;
+			border: 1px solid var(--other);
+			border-radius: 100%;
+			margin-right: 16px;
+			position: relative;
+		}
+
+		.design::before, .design::after {
+			content: "";
+			display: block;
+			width: inherit;
+			height: inherit;
+			border-radius: inherit;
+			position: absolute;
+			transform: scale(0);
+			transform-origin: center center;
+		}
+
+		.design:before {
+			background: var(--other);
+			opacity: 0;
+			transition: .3s;
+		}
+
+		.design::after {
+			background: var(--primary);
+			opacity: .4;
+			transition: .6s;
+		}
+
+		/* Button css for clear and calculate */
+		#btnCalculate {
+			margin: 10px;
+			background-color:#ffc71f;
+			border-radius:39px;
+			border:2px solid #ffc71f;
+			display:inline-block;
+			cursor:pointer;
+			color:#ffffff;
+			font-family:Arial;
+			font-size:17px;
+			padding:19px 52px;
+			text-decoration:none;
+			display: flex;
+			padding-left: 90px;
+			padding-right: 90px;	
+		}
+
+		#btnCalculate:hover {
+			background-color:#ffffff;
+			color: #ffc71f;
+		}
+
+		#btnCalculate:active {
+			position:relative;
+			top:1px;
+		}
+
+		#btnClear {
+			margin: 10px;
+			background-color: #ffffff;
+			border-radius:39px;
+			border:2px solid red;
+			display:inline-block;
+			cursor:pointer;
+			color: red;
+			font-family:Arial;
+			font-size:17px;
+			padding:19px 52px;
+			text-decoration:none;
+			display: flex;
+			padding-left: 100px;
+			padding-right: 100px;
+		}
+
+		#btnClear:hover {
+			background-color: red;
+			color: #ffffff;
+		}
+
+		#btnClear:active {
+			position:relative;
+			top:1px;
+		}
+
+		</style>
+		<script>
+		//Javascript for the calculator
+		function calcSub() {
+			var argSelection = 0;
+			if (Hyperautomation.checked == true){
+				argSelection = Hyperautomation.value;
+			}
+			else if (Multiexperience.checked == true){
+				argSelection = Multiexperience.value;
+			}
+			else if (DistributedCloud.checked == true){
+				argSelection = DistributedCloud.value;
+			}
+				calcVatTotal(argSelection);
+		} 
+
+		function calcVatTotal(parmSelection){
+			var argsubTotal, argdiscountAmt, argvatAmt, argtotalPrice;
+			argsubTotal = parmSelection;
+			argdiscountAmt = 0.05 * parmSelection;
+			argvatAmt = 0.2 * parmSelection;
+			argtotalPrice = parmSelection -argdiscountAmt +argvatAmt;
+			calcDisp(argsubTotal, argdiscountAmt, argvatAmt, argtotalPrice);
+		}
+		function calcDisp(parmsubTotal, parmdiscountAmt, parmvatAmt, parmtotalPrice) {
+			document.getElementById("subVal").innerHTML = parmsubTotal;
+			document.getElementById("discVal").innerHTML = parmdiscountAmt.toFixed(2);
+			document.getElementById("vatVal").innerHTML = parmvatAmt.toFixed(2);
+			document.getElementById("totalVal").innerHTML = parmtotalPrice.toFixed(2);
+			document.getElementById("subTxt").innerHTML = "Sub Total";
+			document.getElementById("discTxt").innerHTML = "Discount (@5%)";
+			document.getElementById("vatTxt").innerHTML = "Vat (@20%)";
+			document.getElementById("totalTxt").innerHTML = "Total Price";
+			document.getElementById("subeuro").innerHTML = "€";
+			document.getElementById("disceuro").innerHTML = "€";
+			document.getElementById("vateuro").innerHTML = "€";
+			document.getElementById("totaleuro").innerHTML = "€";
+			document.getElementById("subtraction").innerHTML = "-";
+			document.getElementById("addition").innerHTML = "+";
+		}
+		</script>
+	</head>
+	<body>
+		<!-- Creating a navigation bar for the website -->
+		<!-- Setting a class value to help with styling of nav bar (navbar) -->
+		<div class="navbar">
+			<ul>
+				<li style="padding-left: 80px;"><a href="index.html"><img src="images/logo.png" alt="logo"></a></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="index.html">CV</a>
+					<!-- Setting a class value to help with styling of sub headings in the nav bar (sub-items) -->
+					<ul class="sub-items">
+						<li><a href="PersonalDetails.html">Personal Details</a></li>
+						<li><a href="Education.html">Education</a></li>
+						<li><a href="WorkExperience.html">Work Experience</a></li>
+					</ul>
+				</li>
+				<li><a href="Interests.html">Interests</a>
+					<ul class="sub-items">
+						<li><a href="Interests.html#Sports">Sports</a></li>
+						<li><a href="Interests.html#Travel">Travel</a></li>
+					</ul>
+				</li>
+				<li><a href="StrategyServices.html">Strategy Services</a>
+					<ul class="sub-items">
+						<li><a href="StrategyServices.html#Hyperautomation">Hyperautomation</a></li>
+						<li><a href="StrategyServices.html#Multiexperience">Multiexperience</a></li>
+						<li><a href="StrategyServices.html#DistributedCloud">Distributed Cloud</a></li>
+					</ul>	
+				</li>
+				<li><a href="Ebus1.html">EBusiness</a></li>
+			</ul>
+		</div>
+		<br>
+		<br>
+		<br>
+		<section>
+			<h2 style=" text-align: center; padding-left: 0px; padding-right: 20px;">Price Calculator</h2>
+			<br>
+			<br>
+			<label for="Hyperautomation">
+				<input type="radio" id="Hyperautomation" name="cost" value="200.00" class="input">
+				<span class="design"></span>
+				<span class="text">Hyperautomation &nbsp; &nbsp; &nbsp; (200.00)</span>
+			</label>
+			<br>
+			<label for="Multiexperience">
+				<input type="radio" id="Multiexperience" name="cost" value="500.00" class="input">
+				<span class="design"></span>
+				<span class="text">Multiexperience &nbsp; &nbsp; &nbsp; (€500.00)</span>
+			</label>
+			<br>
+			<label for="DistributedCloud">
+				<input type="radio" id="DistributedCloud" name="cost" value="1000.00" class="input">
+				<span class="design"></span>
+				<span class="text">Distributed Cloud (€1000.00) </span>
+			</label>
+			<br>
+			<table>
+				<tr><td id="subTxt"></td><td></td><td id="subeuro"></td><td id="subVal"></td></tr>
+				<tr><td id="discTxt"></td><td id="subtraction"></td><td id="disceuro"></td><td id="discVal"></td></tr>
+				<tr><td id="vatTxt"></td><td id="addition"></td><td id="vateuro"></td><td id="vatVal"></td></tr>
+				<tr><td id="totalTxt"></td><td></td><td id="totaleuro"></td><td id="totalVal" style="border-top: 2px solid black;"></td></tr>
+			</table>
+			<br>
+			<br>
+			<input type="button" id="btnCalculate" value="Calculate" onclick="calcSub();">
+			<input type="button" id="btnClear" value="Clear" onclick="window.location.reload();">
+			<br>
+			<br>
+		</section>
+		<div id="gap"></div>
+		<div class="footer">
+			<br>
+			<br>
+			<br>
+			<br>
+			<p>CONTACT ME HERE</p>
+			<h3><a href="mailto:johndoe@gmail"> johndoe@gmail.com</a></h3>
+			<br>
+			<br>
+			<br>
+			<br>
+		</div>
+	</body>
+</html>

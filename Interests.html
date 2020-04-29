@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Interests</title>
+		<!-- Adding an icon to the title -->
+		<link rel="icon" href="images/favicon.png">
+		<!--Making the website responsive-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Linking to styleheet-->
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<!-- Retrieving font for styling -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+		<!-- jQuery-ImageScroll/lib/ImageScroll css-->
+		<style>
+		#container, #container2 {
+		  overflow: hidden;
+		  width: 800px;
+		  height: 230px;
+		  cursor: pointer;
+		  margin-left: auto;
+		  margin-right: auto;
+		  margin-top: 20px;
+		}
+
+		#imgs, #imgs2 {
+		  display: block;
+		  padding: 0;
+		  width: 200%;
+		}
+
+		#imgs li, #imgs2 li {
+		  padding-right: 10px;
+		  display: inline-block;
+		 *display:inline;
+		}
+
+		#imgs img, #imgs2 img {
+		  width: 160px;
+		  height: 120px;
+		}
+
+		.title {
+		  display: block;
+		  width: 100%;
+		  height: 38px;
+		  line-height: 38px;
+		  color: white;
+		  font-weight: bold;
+		  text-align: center;
+		  background: #0a0b4d;
+		  border-radius: 5px;
+		}
+		</style>
+	</head>
+	<body>
+		<!-- Creating a navigation bar for the website -->
+		<!-- Setting a class value to help with styling of nav bar (navbar) -->
+		<div class="navbar">
+			<ul>
+				<li style="padding-left: 80px;"><a href="index.html"><img src="images/logo.png" alt="logo"></a></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="index.html">CV</a>
+					<!-- Setting a class value to help with styling of sub headings in the nav bar (sub-items) -->
+					<ul class="sub-items">
+						<li><a href="PersonalDetails.html">Personal Details</a></li>
+						<li><a href="Education.html">Education</a></li>
+						<li><a href="WorkExperience.html">Work Experience</a></li>
+					</ul>
+				</li>
+				<li><a href="Interests.html">Interests</a>
+					<ul class="sub-items">
+						<li><a href="Interests.html#Sports">Sports</a></li>
+						<li><a href="Interests.html#Travel">Travel</a></li>
+					</ul>
+				</li>
+				<li><a href="StrategyServices.html">Strategy Services</a>
+					<ul class="sub-items">
+						<li><a href="StrategyServices.html#Hyperautomation">Hyperautomation</a></li>
+						<li><a href="StrategyServices.html#Multiexperience">Multiexperience</a></li>
+						<li><a href="StrategyServices.html#DistributedCloud">Distributed Cloud</a></li>
+					</ul>	
+				</li>
+				<li><a href="Ebus1.html">EBusiness</a></li>
+			</ul>
+		</div>
+		<!-- jquery starts-->
+		<div class="jquery-script-center">
+			<div class="jquery-script-ads">
+				<script><!--
+				google_ad_client = "ca-pub-2783044520727903";
+				/* jQuery_demo */
+				google_ad_slot = "2780937993";
+				google_ad_width = 728;
+				google_ad_height = 90;
+				//-->
+				</script>
+				<script src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+			</div>
+			<div class="jquery-script-clear"></div>
+		</div>
+		<br>
+		<h2>Interests</h2>
+		<h3 id="Sports">Sports</h3>
+		<div id="container"> <span class="title">Surfing and Skateboarding</span>
+			<!-- Firts group of images-->
+			<ul id="imgs">
+				<li><img src="Images/Interests/Sport/surf.jpg" alt="" /></li>
+				<li><img src="Images/Interests/Sport/skatepark.jfif" alt="" /></li>
+				<li><img src="Images/Interests/Sport/surfshack.jfif" alt="" /></li>
+				<li><img src="Images/Interests/Sport/skateboard.jfif" alt="" /></li>
+				<li><img src="Images/Interests/Sport/surfboard.jfif" alt="" /></li>
+				<li><img src="Images/Interests/Sport/air.jfif" alt="" /></li>
+				<li><img src="Images/Interests/Sport/cali.jfif" alt="" /></li>
+			</ul>
+		</div>
+		<div id="controler"> </div>
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> 
+		<script src="Simple-Automatic-Image-Scroller-with-jQuery-ImageScroll/lib/ImageScroll.js"></script> 
+		<script>
+
+		  $('#imgs').imageScroll({
+			orientation:"left",
+			speed:600,
+			interval:1000,
+			hoverPause:true,
+			callback:function(){
+			  var ordinal = $(this).find("img").first().attr("src");
+			  <!-- console.log(ordinal); -->
+			  $(this).next("span").text("CallbackDisplay: hidden "+ordinal+"!");
+			}
+		  });
+
+		  </script>
+		  <script>
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-36251023-1']);
+		  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+		<!-- jquery ends -->
+		<h4>Surfing and Skating as sports in my life</h4>
+		<p>Surfing and skateboarding both have decks, boards or planks. And they are fun to ride.
+		One could be seen as a means of transportation; the other was also a Hawaiian past time.
+		They share many tricks, and maneuvers, but they also breathe the same cultural values and lifestyle.
+		If you surf and skate, you live the same dream. Both surfing and skateboarding are on the outside individualistic sports.
+		In the ride, you are totally free - the designer, the architect of your own path. The frontier of your own wild west.
+		Physically, they're both a standing sport.
+		Unlike skiing, where our feet are side by side and toes facing north, surf and skate turn the torso 90 degrees and head your shoulder first.
+		The perfect position for duck and roll. Which is what most surf and skate have in common: wipeouts. 
+		If you're going to be a skateboarder or a surfer be prepared to get beaten up.
+		Be prepared to get roughed. Surfers and skaters require a certain type of girlfriend or boyfriend - someone who cares but lets them live freely.
+		Some are so tough; they hide their scars and bruises and prefer not to admit their faults, their failures, and wipeouts. Others glorify the risk.
+		Glorify the campfire, story telling tales of mass conquer and minor defeat. Maybe a free spirit move or maybe a reason to get out there and tame the demon.
+		The wild horse of the Pacific or the King of concrete slab. More about surfing. The clothes you wear. The shoes you choose. The lack of shoes.
+		The games you play. The people you meet. The fun you have. The stoke you can't control. The freedom you feel. The choices you make.
+		The love you find. The pages you turn. And the friends you make are all like skateboarding.
+		</p>
+		<br>
+		<!-- jquery starts-->
+		<div class="jquery-script-center">
+			<div class="jquery-script-ads">
+				<script><!--
+				google_ad_client = "ca-pub-2783044520727903";
+				/* jQuery_demo */
+				google_ad_slot = "2780937993";
+				google_ad_width = 728;
+				google_ad_height = 90;
+				//-->
+				</script>
+				<script src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+			</div>
+			<div class="jquery-script-clear"></div>
+		</div>
+		<br>
+		<h3 id="Travel">Travel</h3>
+		<div id="container2"> <span class="title">Pula (Croatia), Albufiera (Portugal)</span>
+			<!-- Second group of images-->
+			<ul id="imgs2">
+				<li><img src="Images/Interests/Travel/PulaAmphitheatre.png" alt="" /></li>
+				<li><img src="Images/Interests/Travel/AdriaticSea.jpg" alt="" /></li>
+				<li><img src="Images/Interests/Travel/strip.jfif" alt="" /></li>
+				<li><img src="Images/Interests/Travel/oldtown.jfif" alt="" /></li>
+				<li><img src="Images/Interests/Travel/croatia.jfif" alt="" /></li>
+			</ul>
+			
+		</div>
+		<div id="controler2"> </div>
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> 
+		<script src="Simple-Automatic-Image-Scroller-with-jQuery-ImageScroll/lib/ImageScroll.js"></script> 
+		<script>
+
+		  $('#imgs2').imageScroll({
+			orientation:"left",
+			speed:600,
+			interval:1000,
+			hoverPause:true,
+			callback:function(){
+			  var ordinal = $(this).find("img").first().attr("src");
+			  <!-- console.log(ordinal); -->
+			  $(this).next("span").text("CallbackDisplay: hidden "+ordinal+"!");
+			}
+		  });
+
+		  </script>
+		  <script>
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-36251023-1']);
+		  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+		<!-- jquery ends -->
+		<h4>Places I've Been</h4>
+		<p>Pula, a seafront city on the tip of Croatia’s Istrian Peninsula, is known for its protected harbor, beach-lined coast and Roman ruins.
+		Settled in the prehistoric era and valued for its strategic location, Pula has been occupied, destroyed and rebuilt numerous times. 
+		The Romans, Ostrogoths and Venetians, as well as the Allied Forces in World War II, have each administered the city.
+		Pula is Istria’s largest city, situated in the valley of seven hills, with extraordinary Adriatic views.
+		And it’s a knockout to walk around: narrow cobbled streets that end, suddenly, with magnificent Roman buildings 
+		- including, notably, an enormous, spectacular amphitheatre, built to host 20,000 spectators between 27 - 68 AD,
+		and is the only remaining Roman amphitheatre in the world with a complete circle wall.
+		</p>
+		
+		<p>Albufeira is a coastal city in the southern Algarve region of Portugal.
+		It’s a former fishing village that has become a major holiday destination, with sandy beaches and a busy nightlife strip. 
+		Local fishermen now use the modern marina, also a base for diving, dolphin-watching and boat trips.
+		It's surrounded by candy-colored apartments, with a waterfront promenade.
+		Today, it's devoted to mass-market tourism, particularly cheap package deals, and has all but lost the vestiges of its past.
+		Fishing boats are now moored at the ultramodern marina southwest of the centre, and the old town 
+		– with its pretty cobblestone streets and Moorish influences – is concealed by gaudy signs, English menu boards and rowdy bars.
+		</p>
+		<br>
+		<br>
+		<div id="gap"></div>
+		<div class="footer">
+			<br>
+			<br>
+			<br>
+			<br>
+			<p>CONTACT ME HERE</p>
+			<h3><a href="mailto:johndoe@gmail"> johndoe@gmail.com</a></h3>
+			<br>
+			<br>
+			<br>
+			<br>
+		</div>
+	</body>
+</html>
