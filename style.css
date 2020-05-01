@@ -55,6 +55,7 @@ body {
 	display: block;
 	padding: 8px 20px;
 	border-radius: 10px;
+	
 }
 .navbar li:hover .sub-items {
 	position: absolute;
@@ -79,6 +80,19 @@ body {
 	background-color: #ea5267;
     width: 100%;
 	z-index: -1;
+	height: 100%;
+	
+}
+
+.sub-items {
+	
+ 
+	color: #ea5267;
+}
+
+.navbar li:hover .sub-items {
+	
+	color: #ffffff;
 }
 
 .navbar li a:hover {
@@ -106,7 +120,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-	font-size: 44px;
+	font-size: 40px;
 	line-height: 28px;
 	color: #0a0b4d;
 	font-weight: 600;
@@ -114,12 +128,12 @@ h2 {
 }
 
 h3 {
-  font-size: 24px;
-  line-height: 25px;
+  font-size: 30px;
+  line-height: 30px;
 }
 
 p {
-	font-size: 18px;
+	font-size: 22px;
 	margin-left: 100px;
 	margin-right: 100px;
 	padding: 10px;
@@ -127,7 +141,7 @@ p {
 
 .cv li {
 	margin-left: 20%;
-	font-size: 18px;
+	font-size: 25px;
 }
 
 #table {
