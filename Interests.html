@@ -3,7 +3,7 @@
 	<head>
 		<title>Interests</title>
 		<!-- Adding an icon to the title -->
-		<link rel="icon" href="Images/favicon.png">
+		<link rel="icon" href="images/favicon.png">
 		<!--Making the website responsive-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- Linking to styleheet-->
@@ -14,7 +14,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 		<!-- jQuery-ImageScroll/lib/ImageScroll css-->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<style>
 		#container, #container2 {
 		  overflow: hidden;
@@ -55,67 +54,6 @@
 		  border-radius: 5px;
 		}
 		</style>
-		<script>
-		// Author: Jogis
-// Website: http://imagescroll.qiniudn.com/test1.html
-// Plugin Website: https://github.com/yesvods/jquery-ImageScroll
-(function($){
-  $.fn.imageScroll = function(opts){
-    var defaults = {
-      orientation:"left",
-      speed:600,
-      interval:1500,
-      hoverPause:true,
-      callback:function(){ return false;}
-    }
-    var options = $.extend(defaults, opts);
-    var _this = this;
-    function scroll() {
-      var $firstLi = $(_this).children().first();
-      var $lastLi = $(_this).children().last();
-      var liOuterWidth = $firstLi.outerWidth(true);
-      //In case that parent take a center text-algin layout
-      if($(_this).parent().css("text-align").toLowerCase()=="center"){
-        liOuterWidth*=2;
-      }
-      console.log();
-      switch(options.orientation){
-        case "left":
-        case "top":
-          $firstLi.animate({
-            "margin-left":"-="+liOuterWidth+"px"
-          },options.speed,function(){
-            $firstLi.css("margin-left","+="+liOuterWidth+"px");
-            $lastLi.after($firstLi);
-          });
-          break;
-        case "right":
-        case "bottom":
-          $firstLi.animate({
-            "margin-left":"+="+liOuterWidth+"px"
-          },options.speed,function(){
-            $firstLi.css("margin-left","-="+liOuterWidth+"px");
-            $firstLi.before($lastLi);
-          });
-          break;
-      }
-      //binding this to callback action scope link which make coding native
-      options.callback.call(_this);
-    }
-    var scrollInterval = setInterval(scroll,options.interval);
-    //setting the hover motion
-    if(options.hoverPause){
-      $(this).hover(function(){
-        clearInterval(scrollInterval);
-      },function(){
-        scrollInterval = setInterval(scroll,options.interval);
-      });
-    }
-    return this;
-  }
-})(window.jQuery || window.Zepto);
-
-		</script>
 	</head>
 	<body>
 		<!-- Creating a navigation bar for the website -->
@@ -180,7 +118,7 @@
 		</div>
 		<div id="controler"> </div>
 		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> 
-		
+		<script src="Simple-Automatic-Image-Scroller-with-jQuery-ImageScroll/lib/ImageScroll.js"></script> 
 		<script>
 
 		  $('#imgs').imageScroll({
@@ -259,7 +197,7 @@
 		</div>
 		<div id="controler2"> </div>
 		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> 
-		
+		<script src="Simple-Automatic-Image-Scroller-with-jQuery-ImageScroll/lib/ImageScroll.js"></script> 
 		<script>
 
 		  $('#imgs2').imageScroll({
